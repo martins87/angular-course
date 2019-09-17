@@ -1,5 +1,5 @@
 let myString: string = 'Daniel';
 
-myString = 4;
+let anotherString;
 
 console.log(myString)

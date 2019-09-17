@@ -1,3 +1,3 @@
 var myString = 'Daniel';
-myString = 4;
+var anotherString;
 console.log(myString);
