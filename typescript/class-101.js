@@ -19,3 +19,4 @@ var Car = /** @class */ (function () {
 var car = new Car(5);
 car.accelerate();
 car.getSpeed();
+console.log(Car.numberOfWheels());
