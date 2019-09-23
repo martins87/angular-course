@@ -11,8 +11,11 @@
 <button class="btn btn-primary" (click)="onCreateServer()" [disabled]="!allowNewServer">Add Server</button>
 
 <!-- these two below do the same thing -->
-<p [innerHTML]="serverCreationStatus"></p>
-<p>{{ serverCreationStatus }}</p>
+<!-- <p [innerHTML]="serverCreationStatus"></p> -->
+<p *ngIf="serverCreated; else noServer">{{ serverCreationStatus }}</p>
+<ng-template #noServer>
+    <p>No servers</p>
+</ng-template>
 
 <hr>
 
@@ -24,7 +27,7 @@
             type="text"
             class="form-control"
             [(ngModel)]="username">
-        <button class="btn btn-dark" (click)="onEmptyUsername()" [disabled]="!clickable()">Reset username</button>
+        <button class="btn btn-dark" (click)="username = ''" [disabled]="username === ''">Reset User</button>
     </div>
 </div>
 <br>
