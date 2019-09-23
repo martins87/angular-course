@@ -9,4 +9,22 @@
     [(ngModel)]="serverName">
 <p>{{ serverName }}</p>
 <button class="btn btn-primary" (click)="onCreateServer()" [disabled]="!allowNewServer">Add Server</button>
+
+<!-- these two below do the same thing -->
 <p [innerHTML]="serverCreationStatus"></p>
+<p>{{ serverCreationStatus }}</p>
+
+<hr>
+
+<div class="container">
+    <div class="jumbotron">
+        <h2 style="font-weight:bold">Empty username</h2>
+        <p>Username: {{ username }}</p>
+        <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="username">
+        <button class="btn btn-dark" (click)="onEmptyUsername()" [disabled]="!clickable()">Reset username</button>
+    </div>
+</div>
+<br>
