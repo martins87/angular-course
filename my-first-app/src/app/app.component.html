@@ -1,24 +1,14 @@
 <div class="container">
     <div class="row">
-        <h1><b>I'm in the AppComponent!</b></h1>
-        <hr>
-    </div>
-
-    <div class="row">
-        <div class="col">
-            <app-servers></app-servers>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            <app-warning-alert></app-warning-alert>
-            <app-success-alert></app-success-alert>
-        </div>
-    </div>
-    <div class="row">
-        <app-server></app-server>
-    </div>
-    <div class="row">
-        <app-server></app-server>
+        <h1>Assignment</h1>
+        <br>
+        <!-- <button class="btn btn-dark" (click)="showSecret = !showSecret">Display Details</button> -->
+        <button class="btn btn-dark" (click)="onToggleDetails()">Display Details</button>
+        <p *ngIf="showSecret">Secret password = pizza</p>
+        <div
+            *ngFor="let logItem of log"
+            [ngStyle]="{backgroundColor: logItem >= 5 ? 'blue' : 'transparent'}"
+            [ngClass]="{'white-text': logItem >= 5}"
+        >{{ logItem }}</div>
     </div>
 </div>

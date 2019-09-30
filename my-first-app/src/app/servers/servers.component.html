@@ -8,7 +8,7 @@
     class="form-control"
     [(ngModel)]="serverName">
 <p>{{ serverName }}</p>
-<button class="btn btn-primary" (click)="onCreateServer()" [disabled]="!allowNewServer">Add Server</button>
+<button class="btn btn-dark" (click)="onCreateServer()" [disabled]="!allowNewServer">Add Server</button>
 
 <!-- these two below do the same thing -->
 <!-- <p [innerHTML]="serverCreationStatus"></p> -->
@@ -31,3 +31,8 @@
     </div>
 </div>
 <br>
+
+<hr>
+<button (click)="onClickButton()">Display Details</button>
+<p *ngIf="displayDetails">Secret password = tuna; Clicks: {{ buttonClicks }}</p>
+<hr>

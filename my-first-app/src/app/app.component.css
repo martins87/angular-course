@@ -1,9 +1,14 @@
 h1 {
     color: darkblue;
+    font-weight: bold;
 }
 
-p {
+/* p {
     padding: 20px;
     background-color: rgb(255, 0, 0);
     border: 1px solid red;
+} */
+
+.white-text {
+    color: white;
 }
